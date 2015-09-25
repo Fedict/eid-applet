@@ -1,0 +1,7 @@
+The eID Applet is a browser component to enable the use of the Belgian eID card within web applications in the most user friendly way possible today. The eID Applet runs on Windows, Mac OS X, and Linux platforms and supports a wide range of web browsers including Firefox, IE, and Safari. Since the eID Applet can run both with or without eID Middleware installed, it puts minimal requirements on the client browser environment.
+
+The [eID Applet SDK](http://eid-applet.googlecode.com/files/eid-applet-sdk-1.1.3.zip) allows for web developers to operate the eID Applet with ease while staying focused on the application business requirements. The [eID Applet developer's guide](http://eid-applet.googlecode.com/files/eid-applet-dev-guide-1.1.3.pdf) is a good starting point for web developers and enterprise application architects.
+
+Make yourself member of the [eID Applet group](http://groups.google.com/group/eid-applet) for free support and staying up to date with the eID Applet project. Given the constant security threats in the world of web applications, the security features of the eID Applet are ever evolving. Every day we invest effort in keeping the eID Applet as safe as possible by applying innovative security concepts. Via the eID Applet group we also keep you informed about eID Applet security updates.
+
+**Migrated to https://github.com/e-Contract/eid-applet**
