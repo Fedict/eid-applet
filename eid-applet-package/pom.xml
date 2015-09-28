@@ -67,7 +67,7 @@
 							</execution>
 						</executions>
 						<configuration>
-							<keystore>target/sign.p12</keystore>
+							<keystore>${project.build.directory}/sign.p12</keystore>
 							<dname><![CDATA[CN=Test Signer, OU=eID, L=Brussels, ST=Brussels, O=FedICT, C=BE]]></dname>
 							<alias>SIGN</alias>
 							<keypass>secret</keypass>
@@ -81,13 +81,6 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-jar-plugin</artifactId>
-						<executions>
-							<execution>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
 						<configuration>
 							<archive>
 								<addMavenDescriptor>false</addMavenDescriptor>
@@ -97,8 +90,21 @@
 									<Application-Name>eID Applet</Application-Name>
 								</manifestEntries>
 							</archive>
-							<type>PKCS12</type>
-							<keystore>target/sign.p12</keystore>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-jarsigner-plugin</artifactId>
+						<executions>
+							<execution>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<storetype>PKCS12</storetype>
+							<keystore>${project.build.directory}/sign.p12</keystore>
 							<alias>SIGN</alias>
 							<storepass>secret</storepass>
 						</configuration>
