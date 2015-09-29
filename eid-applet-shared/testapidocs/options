@@ -1,0 +1,26 @@
+-classpath
+'/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-shared/target/classes:/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-shared/target/test-classes:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/log4j/log4j/1.2.16/log4j-1.2.16.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/org/easymock/easymock/3.0/easymock-3.0.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/org/objenesis/objenesis/1.2/objenesis-1.2.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/cglib/cglib-nodep/2.2/cglib-nodep-2.2.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/junit/junit/4.8.2/junit-4.8.2.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-shared/src/test/java'
+-author
+-bottom
+'Copyright &#169; 2008-2015 <a href="http://www.fedict.belgium.be/">FedICT</a>. All Rights Reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-shared/target/site/testapidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'eID Applet Shared 1.2.0-SNAPSHOT Test API'
+-link
+'../apidocs'
+-linkoffline
+'http://download.oracle.com/javase/6/docs/api' '/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-shared/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'eID Applet Shared 1.2.0-SNAPSHOT Test API'

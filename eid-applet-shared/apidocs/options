@@ -1,0 +1,24 @@
+-classpath
+'/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-shared/target/classes'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-shared/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2008-2015 <a href="http://www.fedict.belgium.be/">FedICT</a>. All Rights Reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-shared/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'eID Applet Shared 1.2.0-SNAPSHOT API'
+-linkoffline
+'http://download.oracle.com/javase/6/docs/api' '/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-shared/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'eID Applet Shared 1.2.0-SNAPSHOT API'
