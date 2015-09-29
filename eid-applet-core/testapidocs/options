@@ -1,0 +1,28 @@
+-classpath
+'/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-core/target/classes:/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-core/target/test-classes:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/log4j/log4j/1.2.16/log4j-1.2.16.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/commons-io/commons-io/1.4/commons-io-1.4.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-shared/target/classes:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/junit/junit/4.8.2/junit-4.8.2.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/commons-codec/commons-codec/1.4/commons-codec-1.4.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/org/bouncycastle/bcprov-jdk16/1.45/bcprov-jdk16-1.45.jar'
+-encoding
+'ISO-8859-1'
+-protected
+-sourcepath
+'/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-core/src/test/java'
+-author
+-bottom
+'Copyright &#169; 2008-2015 <a href="http://www.fedict.belgium.be/">FedICT</a>. All Rights Reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-core/target/site/testapidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'eID Applet Core 1.2.0-SNAPSHOT Test API'
+-link
+'../apidocs'
+-linkoffline
+'http://download.oracle.com/javase/6/docs/api' '/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-core/target/javadoc-bundle-options'
+-linkoffline
+'http://code.google.com/p/eid-applet/apidocs' '/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-shared/target/site/testapidocs'
+-use
+-version
+-windowtitle
+'eID Applet Core 1.2.0-SNAPSHOT Test API'
