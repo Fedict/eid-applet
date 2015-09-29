@@ -1,0 +1,28 @@
+-classpath
+'/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-service/target/classes:/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-service/target/test-classes:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/log4j/log4j/1.2.16/log4j-1.2.16.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/org/objenesis/objenesis/1.2/objenesis-1.2.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/cglib/cglib-nodep/2.2/cglib-nodep-2.2.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/commons-lang/commons-lang/2.5/commons-lang-2.5.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/org/mortbay/jetty/jetty-servlet-tester/6.1.26/jetty-servlet-tester-6.1.26.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/org/mortbay/jetty/jetty-util/6.1.26/jetty-util-6.1.26.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/javax/servlet/servlet-api/2.4/servlet-api-2.4.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/org/mortbay/jetty/servlet-api/2.5-20081211/servlet-api-2.5-20081211.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/junit/junit/4.8.2/junit-4.8.2.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/org/bouncycastle/bcprov-jdk16/1.45/bcprov-jdk16-1.45.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/org/bouncycastle/bcmail-jdk16/1.45/bcmail-jdk16-1.45.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/org/mortbay/jetty/jetty/6.1.26/jetty-6.1.26.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/org/bouncycastle/bctsp-jdk16/1.45/bctsp-jdk16-1.45.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/com/lowagie/itext/2.1.7/itext-2.1.7.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/org/easymock/easymock/3.0/easymock-3.0.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/commons-io/commons-io/1.4/commons-io-1.4.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/joda-time/joda-time/1.6.2/joda-time-1.6.2.jar:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-service-spi/target/classes:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/commons-logging/commons-logging-api/1.1/commons-logging-api-1.1.jar:/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-shared/target/classes:/Users/Jan/Projects/Fedict/eIdProductSupport/MavenRepo/commons-codec/commons-codec/1.4/commons-codec-1.4.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-service/src/test/java'
+-author
+-bottom
+'Copyright &#169; 2008-2015 <a href="http://www.fedict.belgium.be/">FedICT</a>. All Rights Reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-service/target/site/testapidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'eID Applet Service 1.2.0-SNAPSHOT Test API'
+-link
+'../apidocs'
+-linkoffline
+'http://download.oracle.com/javase/6/docs/api' '/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-service/target/javadoc-bundle-options'
+-linkoffline
+'http://code.google.com/p/eid-applet/apidocs' '/Users/jan/Projects/Fedict/eIdProductSupport/Sources/eid-applet/eid-applet-shared/target/site/testapidocs'
+-use
+-version
+-windowtitle
+'eID Applet Service 1.2.0-SNAPSHOT Test API'
