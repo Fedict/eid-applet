@@ -496,7 +496,7 @@ public class Applet extends JApplet {
 			addDetailMessage("eID Applet - Copyright (C) 2008-2013 FedICT.");
 			addDetailMessage("Copyright (C) 2014-2015 e-Contract.be BVBA.");
 			addDetailMessage("Released under GNU LGPL version 3.0 license.");
-			addDetailMessage("More info: https://github.com/e-Contract/eid-applet");
+			addDetailMessage("More info: https://github.com/Fedict/eid-applet");
 			/*
 			 * first check required applet permissions. prevents that
 			 * cardTerminal.connect will trigger the security exception later on

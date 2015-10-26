@@ -4,7 +4,7 @@
 
 This project contains the source code tree of the eID Applet.
 
-The source code is hosted at: `https://github.com/e-Contract/eid-applet`
+The source code is hosted at: `https://github.com/Fedict/eid-applet`
 
 ## 2. Requirements
 

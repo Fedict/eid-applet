@@ -1,3 +1,6 @@
+2.0.0.FEDICT
+    * Initialize Fedict Github repository based on latest version of e-contract.
+
 1.2.6 - 21 Oct 2015
 	* CDI API, retrieve auth cert during identification
 
