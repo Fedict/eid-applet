@@ -123,6 +123,9 @@
 		</profile>
 		<profile>
 			<id>all</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 			<modules>
 				<module>eid-applet-tests</module>
 				<module>eid-applet-dev-guide</module>
