@@ -570,6 +570,19 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-javadoc</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
 				<configuration>
 					<reportPlugins>
@@ -898,6 +911,11 @@
 			</releases>
 		</repository>
 		<repository>
+			<id>eid-maven-repo</id>
+			<url>https://maven.eid.belgium.be/</url>
+		</repository>
+		<repository>
+			<!-- TODO JanVdB remove -->
 			<id>e-contract-maven-repo</id>
 			<url>https://www.e-contract.be/maven2/</url>
 			<releases>
