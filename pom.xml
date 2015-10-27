@@ -728,10 +728,9 @@
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-javadoc-plugin</artifactId>
+					<artifactId>maven-java-plugin</artifactId>
 					<version>${maven-javadoc-plugin.version}</version>
 					<configuration>
-						<additionalparam>-Xdoclint:none</additionalparam>
 						<links>
 							<link>http://java.sun.com/javase/6/docs/api/</link>
 							<link>http://java.sun.com/javaee/5/docs/api/</link>
