@@ -6,6 +6,7 @@
 		<groupId>be.fedict.eid-applet</groupId>
 		<artifactId>eid-applet-beta</artifactId>
 		<version>2.0.0.FEDICT-SNAPSHOT</version>
+		<relativePath>..</relativePath>
 	</parent>
 	<name>eID Applet Beta Web Application</name>
 	<description>Beta Web Application for eID Applet.</description>

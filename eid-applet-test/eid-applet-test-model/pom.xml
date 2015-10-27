@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>be.fedict.eid-applet</groupId>
 		<artifactId>eid-applet-test</artifactId>
 		<version>2.0.0.FEDICT-SNAPSHOT</version>
+		<relativePath>..</relativePath>
 	</parent>
+
 	<name>eID Applet Test Model</name>
 	<description>EJB3 Model for Test eID Applet Web App.</description>
 	<artifactId>eid-applet-test-model</artifactId>
 	<packaging>ejb</packaging>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -29,6 +33,7 @@
 			</plugin>
 		</plugins>
 	</build>
+
 	<dependencies>
 		<dependency>
 			<groupId>be.fedict.eid-applet</groupId>
