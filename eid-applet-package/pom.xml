@@ -60,7 +60,6 @@
 					<plugin>
 						<groupId>org.codehaus.mojo</groupId>
 						<artifactId>keytool-maven-plugin</artifactId>
-						<!-- http://jira.codehaus.org/browse/MKEYTOOL-6 -->
 						<executions>
 							<execution>
 								<goals>
@@ -115,26 +114,12 @@
 			</build>
 		</profile>
 		<profile>
-			<id>etoken</id>
+			<id>codesigning</id>
 			<build>
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-jar-plugin</artifactId>
-						<configuration>
-							<archive>
-								<addMavenDescriptor>false</addMavenDescriptor>
-								<manifestEntries>
-									<Permissions>all-permissions</Permissions>
-									<Codebase><![CDATA[https://*.be https://*.brussels https://*.vlaanderen localhost 127.0.0.1]]></Codebase>
-									<Application-Name>eID Applet</Application-Name>
-								</manifestEntries>
-							</archive>
-						</configuration>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-jarsigner-plugin</artifactId>
 						<executions>
 							<execution>
 								<goals>
@@ -143,12 +128,18 @@
 							</execution>
 						</executions>
 						<configuration>
-							<keystore>NONE</keystore>
-							<storetype>PKCS11</storetype>
-							<providerClass>sun.security.pkcs11.SunPKCS11</providerClass>
-							<providerArg>src/main/jar/etoken.config</providerArg>
-							<storepass>${etoken.storepass}</storepass>
-							<alias>${etoken.alias}</alias>
+							<archive>
+								<addMavenDescriptor>false</addMavenDescriptor>
+								<manifestEntries>
+									<Permissions>all-permissions</Permissions>
+									<Codebase>https://*.be localhost 127.0.0.1</Codebase>
+								</manifestEntries>
+							</archive>
+							<type>${keystore.type}</type>
+							<keystore>${keystore.path}</keystore>
+							<storepass>${keystore.password}</storepass>
+							<keypass>${keystore.password}</keypass>
+							<alias>${keystore.alias}</alias>
 							<verbose>true</verbose>
 							<arguments>
 								<argument>-tsa</argument>

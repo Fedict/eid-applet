@@ -20,9 +20,9 @@
 		<name>FedICT</name>
 		<url>http://www.fedict.belgium.be/</url>
 	</organization>
-	
+
 	<url>https://github.com/Fedict/eid-applet</url>
-	
+
 	<developers>
 		<developer>
 			<id>fcorneli</id>
@@ -84,7 +84,7 @@
 		<maven-project-info-reports-plugin.version>2.4</maven-project-info-reports-plugin.version>
 		<maven-surefire-report-plugin.version>2.9</maven-surefire-report-plugin.version>
 	</properties>
-	
+
 	<modules>
 		<module>eid-applet-shared</module>
 		<module>eid-applet-core</module>
@@ -99,7 +99,7 @@
 		<module>eid-applet-sql-ddl-plugin</module>
 		<module>eid-applet-bom</module>
 	</modules>
-	
+
 	<profiles>
 		<profile>
 			<id>tests</id>
@@ -958,10 +958,6 @@
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
-		</repository>
-		<repository>
-			<id>Codehaus SVN Repository</id>
-			<url>http://svn.codehaus.org/fest/m2/repo/</url>
 		</repository>
 		<repository>
 			<id>shibboleth</id>
