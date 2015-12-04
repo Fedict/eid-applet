@@ -33,6 +33,20 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<addMavenDescriptor>false</addMavenDescriptor>
+						<manifestEntries>
+							<Permissions>all-permissions</Permissions>
+							<Codebase><![CDATA[https://*.be https://*.brussels https://*.vlaanderen localhost 127.0.0.1]]></Codebase>
+							<Application-Name>eID Applet</Application-Name>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
 				<configuration>
 					<reportPlugins>
@@ -57,7 +71,6 @@
 					<plugin>
 						<groupId>org.codehaus.mojo</groupId>
 						<artifactId>keytool-maven-plugin</artifactId>
-						<!-- http://jira.codehaus.org/browse/MKEYTOOL-6 -->
 						<executions>
 							<execution>
 								<goals>
@@ -66,7 +79,7 @@
 							</execution>
 						</executions>
 						<configuration>
-							<keystore>target/sign.p12</keystore>
+							<keystore>${project.build.directory}/sign.p12</keystore>
 							<dname><![CDATA[CN=Test Signer, OU=eID, L=Brussels, ST=Brussels, O=FedICT, C=BE]]></dname>
 							<alias>SIGN</alias>
 							<keypass>secret</keypass>
@@ -75,50 +88,6 @@
 							<keyalg>RSA</keyalg>
 							<storetype>PKCS12</storetype>
 							<verbose>true</verbose>
-						</configuration>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-jar-plugin</artifactId>
-						<executions>
-							<execution>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-						<configuration>
-							<archive>
-								<addMavenDescriptor>false</addMavenDescriptor>
-								<manifestEntries>
-									<Permissions>all-permissions</Permissions>
-									<Codebase>https://*.be localhost 127.0.0.1</Codebase>
-								</manifestEntries>
-							</archive>
-							<type>PKCS12</type>
-							<keystore>target/sign.p12</keystore>
-							<alias>SIGN</alias>
-							<storepass>secret</storepass>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<profile>
-			<id>etoken</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-jar-plugin</artifactId>
-						<configuration>
-							<archive>
-								<addMavenDescriptor>false</addMavenDescriptor>
-								<manifestEntries>
-									<Permissions>all-permissions</Permissions>
-									<Codebase>https://*.be localhost 127.0.0.1</Codebase>
-								</manifestEntries>
-							</archive>
 						</configuration>
 					</plugin>
 					<plugin>
@@ -132,22 +101,40 @@
 							</execution>
 						</executions>
 						<configuration>
-							<keystore>NONE</keystore>
-							<storetype>PKCS11</storetype>
-							<providerClass>sun.security.pkcs11.SunPKCS11</providerClass>
-							<providerArg>src/main/jar/etoken.config</providerArg>
-							<storepass>FedICT1234</storepass>
-							<alias>CODE_SIGN</alias>
+							<storetype>PKCS12</storetype>
+							<keystore>${project.build.directory}/sign.p12</keystore>
+							<alias>SIGN</alias>
+							<storepass>secret</storepass>
 							<verbose>true</verbose>
-							<!-- 
-								Cannot get past the HTTP proxy, even with proxy config.
-							-->
-							<!--
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>codesigning</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-jarsigner-plugin</artifactId>
+						<executions>
+							<execution>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<storetype>${keystore.type}</storetype>
+							<keystore>${keystore.path}</keystore>
+							<alias>${keystore.alias}</alias>
+							<storepass>${keystore.password}</storepass>
+							<verbose>true</verbose>
 							<arguments>
 								<argument>-tsa</argument>
 								<argument>http://tsa.belgium.be/connect</argument>
 							</arguments>
-							-->
 						</configuration>
 					</plugin>
 				</plugins>
