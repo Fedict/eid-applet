@@ -52,7 +52,6 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
 
-import be.fedict.eid.applet.service.signer.DigestAlgo;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.ArrayUtils;
@@ -76,6 +75,7 @@ import org.w3c.dom.ls.LSInput;
 import org.w3c.dom.ls.LSResourceResolver;
 
 import be.fedict.eid.applet.service.signer.AbstractXmlSignatureService;
+import be.fedict.eid.applet.service.signer.DigestAlgo;
 import be.fedict.eid.applet.service.signer.SignatureFacet;
 import be.fedict.eid.applet.service.signer.TemporaryDataStorage;
 import be.fedict.eid.applet.service.signer.facets.EnvelopedSignatureFacet;
@@ -256,7 +256,12 @@ public class XAdESSignatureFacetTest {
 		NodeList signatureNodeList = signedDocument.getElementsByTagNameNS(
 				XMLSignature.XMLNS, "Signature");
 		assertEquals(1, signatureNodeList.getLength());
-		Node signatureNode = signatureNodeList.item(0);
+		Element signatureNode = (Element) signatureNodeList.item(0);
+
+		// work-around for Java 7
+		Element signedPropertiesElement = (Element) signatureNode
+				.getElementsByTagNameNS(XAdESXLSignatureFacet.XADES_NAMESPACE, "SignedProperties").item(0);
+		signedPropertiesElement.setIdAttribute("Id", true);
 
 		DOMValidateContext domValidateContext = new DOMValidateContext(
 				KeySelector.singletonKeySelector(keyPair.getPublic()),
@@ -425,7 +430,12 @@ public class XAdESSignatureFacetTest {
 		NodeList signatureNodeList = signedDocument.getElementsByTagNameNS(
 				XMLSignature.XMLNS, "Signature");
 		assertEquals(1, signatureNodeList.getLength());
-		Node signatureNode = signatureNodeList.item(0);
+		Element signatureNode = (Element) signatureNodeList.item(0);
+
+		// work-around for Java 7
+		Element signedPropertiesElement = (Element) signatureNode
+				.getElementsByTagNameNS(XAdESXLSignatureFacet.XADES_NAMESPACE, "SignedProperties").item(0);
+		signedPropertiesElement.setIdAttribute("Id", true);
 
 		DOMValidateContext domValidateContext = new DOMValidateContext(
 				KeySelector.singletonKeySelector(keyPair.getPublic()),

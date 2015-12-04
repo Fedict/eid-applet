@@ -44,7 +44,6 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import be.fedict.eid.applet.service.signer.DigestAlgo;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.logging.Log;
@@ -56,13 +55,16 @@ import org.joda.time.DateTime;
 import org.junit.Before;
 import org.junit.Test;
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import be.fedict.eid.applet.service.signer.DigestAlgo;
 import be.fedict.eid.applet.service.signer.KeyInfoKeySelector;
 import be.fedict.eid.applet.service.signer.TemporaryDataStorage;
+import be.fedict.eid.applet.service.signer.facets.XAdESXLSignatureFacet;
 import be.fedict.eid.applet.service.signer.odf.AbstractODFSignatureService;
 import be.fedict.eid.applet.service.signer.odf.ODFURIDereferencer;
 import be.fedict.eid.applet.service.spi.DigestInfo;
@@ -244,6 +246,13 @@ public class AbstractODFSignatureServiceTest {
 	 */
 	private boolean verifySignature(URL odfUrl, Node signatureNode)
 			throws MarshalException, XMLSignatureException {
+		// work-around for Java 7
+		Element signedPropertiesElement = (Element) ((Element) signatureNode)
+				.getElementsByTagNameNS(XAdESXLSignatureFacet.XADES_NAMESPACE, "SignedProperties").item(0);
+		if (null != signedPropertiesElement) {
+			signedPropertiesElement.setIdAttribute("Id", true);
+		}
+
 		DOMValidateContext domValidateContext = new DOMValidateContext(
 				new KeyInfoKeySelector(), signatureNode);
 		ODFURIDereferencer dereferencer = new ODFURIDereferencer(odfUrl);

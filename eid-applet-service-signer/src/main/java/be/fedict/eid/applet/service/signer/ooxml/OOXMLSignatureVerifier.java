@@ -82,6 +82,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import be.fedict.eid.applet.service.signer.KeyInfoKeySelector;
+import be.fedict.eid.applet.service.signer.facets.XAdESXLSignatureFacet;
 import be.fedict.eid.applet.service.signer.jaxb.opc.contenttypes.CTDefault;
 import be.fedict.eid.applet.service.signer.jaxb.opc.contenttypes.CTOverride;
 import be.fedict.eid.applet.service.signer.jaxb.opc.contenttypes.CTTypes;
@@ -160,6 +161,13 @@ public class OOXMLSignatureVerifier {
 				return null;
 			}
 			Node signatureNode = signatureNodeList.item(0);
+
+			// work-around for Java 7
+			Element signedPropertiesElement = (Element) ((Element) signatureNode)
+					.getElementsByTagNameNS(XAdESXLSignatureFacet.XADES_NAMESPACE, "SignedProperties").item(0);
+			if (null != signedPropertiesElement) {
+				signedPropertiesElement.setIdAttribute("Id", true);
+			}
 
 			KeyInfoKeySelector keySelector = new KeyInfoKeySelector();
 			DOMValidateContext domValidateContext = new DOMValidateContext(
