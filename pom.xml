@@ -5,7 +5,7 @@
 	<name>eID Applet Project</name>
 	<groupId>be.fedict</groupId>
 	<artifactId>eid-applet</artifactId>
-	<version>2.0.0.FEDICT-SNAPSHOT</version>
+	<version>2.0.0.FEDICT</version>
 	<packaging>pom</packaging>
 	<inceptionYear>2008</inceptionYear>
 
@@ -44,7 +44,8 @@
 	<scm>
 		<connection>scm:git:ssh://git@github.com/Fedict/eid-applet.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/Fedict/eid-applet.git</developerConnection>
-	</scm>
+	  <tag>2.0.0.FEDICT</tag>
+  </scm>
 
 	<distributionManagement>
 		<repository>
@@ -840,7 +841,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore/>
+										<ignore />
 									</action>
 								</pluginExecution>
 								<pluginExecution>
@@ -854,7 +855,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore/>
+										<ignore />
 									</action>
 								</pluginExecution>
 								<pluginExecution>
@@ -867,7 +868,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore/>
+										<ignore />
 									</action>
 								</pluginExecution>
 								<pluginExecution>
