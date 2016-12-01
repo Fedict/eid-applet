@@ -1,5 +1,8 @@
 # README for eID Applet Project
 
+> At the moment, Java applets (such as the eid-applet) are being deprecated by different browser vendors. 
+> See [DEPRECATION](DEPRECATION.md) for more information. 
+
 ## 1. Introduction
 
 This project contains the source code tree of the eID Applet.
