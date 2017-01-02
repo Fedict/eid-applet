@@ -129,9 +129,6 @@
 			</activation>
 			<modules>
 				<module>eid-applet-tests</module>
-				<module>eid-applet-dev-guide</module>
-				<module>eid-applet-docbook-plugin</module>
-				<module>eid-applet-sdk</module>
 				<module>eid-applet-beta</module>
 			</modules>
 		</profile>
