@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Fedict/eid-applet.svg?branch=develop)](https://travis-ci.org/Fedict/eid-applet)
+
 # README for eID Applet Project
 
 > At the moment, Java applets (such as the eid-applet) are being deprecated by different browser vendors. 
