@@ -34,6 +34,7 @@
 		<module>eid-applet-test-model</module>
 		<module>eid-applet-test-webapp</module>
 		<module>eid-applet-test-deploy</module>
+		<module>eid-applet-test-cli</module>
 	</modules>
 	<properties>
 		<bouncycastle-jboss7.version>1.50</bouncycastle-jboss7.version>
