@@ -123,6 +123,12 @@ public class PcscEid extends Observable {
 	public static final byte[] APPLET_AID = new byte[] { (byte) 0xA0, 0x00, 0x00, 0x00, 0x30, 0x29, 0x05, 0x70, 0x00,
 			(byte) 0xAD, 0x13, 0x10, 0x01, 0x01, (byte) 0xFF };
 
+	private static final Set<String> PPDU_NAMES = new HashSet<String>(Arrays.asList(
+			"Digipass 870".toLowerCase(),
+			"Digipass 875".toLowerCase(),
+			"Digipass 920".toLowerCase()
+	));
+
 	private final View view;
 
 	private final TerminalFactory terminalFactory;
@@ -405,6 +411,10 @@ public class PcscEid extends Observable {
 		this.card.beginExclusive();
 		this.cardChannel = card.getBasicChannel();
 		return true;
+	}
+
+	public void addPPDUName(String ppduName) {
+		PPDU_NAMES.add(ppduName.toLowerCase());
 	}
 
 	private static class ListData {
@@ -734,15 +744,9 @@ public class PcscEid extends Observable {
 		}
 	}
 
-	private Set<String> ppduNames = new HashSet<String>();
-
-	public void addPPDUName(String name) {
-		this.ppduNames.add(name.toLowerCase());
-	}
-
 	private boolean isPPDUCardTerminal(String name) {
 		name = name.toLowerCase();
-		for (String ppduName : this.ppduNames) {
+		for (String ppduName : PPDU_NAMES) {
 			if (name.contains(ppduName)) {
 				return true;
 			}
