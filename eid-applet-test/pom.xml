@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>be.fedict</groupId>
 		<artifactId>eid-applet</artifactId>
-		<version>2.0.1.FEDICT-SNAPSHOT</version>
+		<version>2.0.1.FEDICT</version>
 		<relativePath>..</relativePath>
 	</parent>
 	<name>eID Applet Test Project</name>
