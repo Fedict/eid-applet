@@ -57,7 +57,7 @@ import be.fedict.eid.applet.sc.PcscEid;
 
 /**
  * Integration tests for the new secure pinpad readers from FedICT.
- * <p/>
+ *
  * These readers implement the specifications as described at:
  * http://code.google.com/p/eid-applet/wiki/SmartCardReader
  * 
@@ -126,14 +126,14 @@ public class SecurePinPadReaderTest {
 
 	/**
 	 * Creates a regular SHA1 signature using the non-repudiation key.
-	 * <p/>
+	 *
 	 * Remark: right now you have to wait until the digest value has been
 	 * scrolled completely before being able to continue. Fixed in V015Z.
-	 * <p/>
+	 *
 	 * Remark: The smart card reader does not honor the wLangId of the CCID pin
 	 * verification data structure yet. V010Z still does not honor the wLangId.
 	 * V015Z fixes this, except for dutch. (0x13, 0x04)
-	 * <p/>
+	 *
 	 * V010Z: the reader first displays "Sign Hash?", then it requests the
 	 * "Authentication PIN?" and then it asks to "Sign Hash?" again. This is due
 	 * to the way the eID Applet code has been constructed. Fixed in recent
@@ -149,7 +149,7 @@ public class SecurePinPadReaderTest {
 
 	/**
 	 * Secure PIN Entry Capabilities
-	 * <p/>
+	 *
 	 * PC/SC specs Interoperability Specification for ICCs and Personal Computer
 	 * Systems Part 10 IFDs with Secure PIN Entry Capabilities allow room for
 	 * vendor specific feature tags within the range of 0x80 – 0xFE. So we could
@@ -158,9 +158,9 @@ public class SecurePinPadReaderTest {
 	 * when the smart card readers asks for validation of the digest value, the
 	 * software UI could display some info message that you have to check the
 	 * reader display to be able to continue.
-	 * <p/>
+	 *
 	 * V012Z indicates ffffff80, so 0x80.
-	 * <p/>
+	 *
 	 * V015Z no longer indicates this.
 	 * 
 	 * @see http
@@ -220,12 +220,12 @@ public class SecurePinPadReaderTest {
 	 * Create a plain text authentication signature, directly after creating a
 	 * regular SHA1 authentication signature. This is the sequence that will be
 	 * implemented in the eID Applet.
-	 * <p/>
+	 *
 	 * V006Z: Remark: without the SET APDU the secure smart card reader won't
 	 * display the plain text message. Fixed in V010Z.
-	 * <p/>
+	 *
 	 * V012Z: language support is still shaky.
-	 * <p/>
+	 *
 	 * V015Z also performs a logoff in case of plain text. Good.
 	 * 
 	 * @throws Exception
@@ -273,7 +273,7 @@ public class SecurePinPadReaderTest {
 
 	/**
 	 * Creates a non-repudiation signature with plain text.
-	 * <p/>
+	 *
 	 * Remark: "Enter NonRep PIN" should maybe be replaced with "Enter Sign PIN"
 	 * . Fixed in V010Z.
 	 * 

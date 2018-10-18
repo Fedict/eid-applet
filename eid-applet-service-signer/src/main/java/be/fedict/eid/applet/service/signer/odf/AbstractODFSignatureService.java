@@ -48,8 +48,6 @@ import be.fedict.eid.applet.service.signer.facets.XAdESSignatureFacet;
  * The signatures created with this class are accepted as valid signature within
  * OpenOffice.org 3.x. They probably don't get accepted by older OOo versions.
  * 
- * @see http://wiki.services.openoffice.org/wiki/Security/Digital_Signatures
- * 
  * @author fcorneli
  * 
  */

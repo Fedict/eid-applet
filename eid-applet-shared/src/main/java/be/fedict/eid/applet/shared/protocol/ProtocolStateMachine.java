@@ -61,7 +61,6 @@ public class ProtocolStateMachine {
 	 * Checks the given response message against the protocol state rules.
 	 * 
 	 * @param responseMessage
-	 * @throws ServletException
 	 */
 	public void checkResponseMessage(Object responseMessage) {
 		ProtocolState protocolState = this.protocolContext.getProtocolState();
@@ -105,7 +104,6 @@ public class ProtocolStateMachine {
 	 * Checks the given request message against protocol state rules.
 	 * 
 	 * @param requestMessage
-	 * @throws ServletException
 	 */
 	public void checkRequestMessage(Object requestMessage) {
 		// TODO return some non-runtime exception

@@ -98,7 +98,6 @@ import be.fedict.eid.applet.service.signer.time.LocalClock;
  * Office OpenXML Signature Facet implementation.
  * 
  * @author fcorneli
- * @see http://msdn.microsoft.com/en-us/library/cc313071.aspx
  */
 public class OOXMLSignatureFacet implements SignatureFacet {
 

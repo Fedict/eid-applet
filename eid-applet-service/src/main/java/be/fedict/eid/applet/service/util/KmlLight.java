@@ -27,7 +27,6 @@ import java.util.zip.ZipOutputStream;
  * A "light" implementation of OGC standard KML 2.2 This class merely creates
  * the KMZ zip package
  *
- * @see http://www.opengeospatial.org/standards/kml/
  * @author Bart Hanssens
  */
 public class KmlLight {

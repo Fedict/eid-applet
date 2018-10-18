@@ -38,8 +38,6 @@ import be.fedict.eid.applet.service.util.VcardLight;
  * Servlet that outputs the eID identity data from the HTTP session to a vCard
  * 3.0 Can be used by address books
  *
- * @see http://www.ietf.org/rfc/rfc2426.txt
- *
  * @author Bart Hanssens
  * 
  */

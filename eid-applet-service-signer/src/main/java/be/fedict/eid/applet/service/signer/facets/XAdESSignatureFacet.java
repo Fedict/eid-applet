@@ -89,7 +89,6 @@ import be.fedict.eid.applet.service.signer.time.LocalClock;
  * participated multiple ETSI XAdES plugtests.
  * 
  * @author Frank Cornelis
- * @see http://en.wikipedia.org/wiki/XAdES
  * 
  */
 public class XAdESSignatureFacet implements SignatureFacet {

@@ -50,7 +50,7 @@ public class KmlLightDocument {
 	private Document docKml;
 
 	/**
-	 * Create a <name>, to be used as a label
+	 * Create a name, to be used as a label
 	 *
 	 * @param name
 	 *            name to be used
@@ -65,7 +65,7 @@ public class KmlLightDocument {
 	}
 
 	/**
-	 * Create a <address> Note: it's up to the processing application to convert
+	 * Create a address Note: it's up to the processing application to convert
 	 * the address to (GPS) coordinates.
 	 *
 	 * @param street
@@ -88,7 +88,7 @@ public class KmlLightDocument {
 	}
 
 	/**
-	 * Create a <description> element, the description can contain HTML markup
+	 * Create a description element, the description can contain HTML markup
 	 *
 	 * @param description
 	 *            text to be used
@@ -103,7 +103,7 @@ public class KmlLightDocument {
 	}
 
 	/**
-	 * Create a <timespan> element
+	 * Create a timespan element
 	 * 
 	 * @param begin
 	 * @return
@@ -127,7 +127,7 @@ public class KmlLightDocument {
 	}
 
 	/**
-	 * Create a <Placemark>
+	 * Create a Placemark
 	 *
 	 * @param name
 	 *            the name (title)

@@ -46,7 +46,7 @@ public interface AuthenticationSignatureService {
 	/**
 	 * Via this method your receive the signature as created via the eID Applet
 	 * over the corresponding digest value from the {@link DigestInfo} structure
-	 * from {@link #preSign(List)}.
+	 * from {@link #preSign(List, AuthenticationSignatureContext)} 
 	 * 
 	 * @param signatureValue
 	 *            the signature value.

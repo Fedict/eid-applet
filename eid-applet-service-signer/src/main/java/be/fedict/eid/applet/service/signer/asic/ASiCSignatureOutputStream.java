@@ -33,7 +33,7 @@ import org.apache.commons.logging.LogFactory;
 
 /**
  * ASiC signature output stream.
- * <p/>
+ *
  * This output stream implementation injects an ASiC signature into an ASiC
  * file.
  * 

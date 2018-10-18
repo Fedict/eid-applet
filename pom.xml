@@ -81,7 +81,7 @@
 		<richfaces.version>3.3.4.Final</richfaces.version>
 		<bouncycastle.version>1.45</bouncycastle.version>
 		<!-- jTrust 1.1.2 fails on 1.46 -->
-		<maven-javadoc-plugin.version>2.8</maven-javadoc-plugin.version>
+		<maven-javadoc-plugin.version>3.0.1</maven-javadoc-plugin.version>
 		<maven-project-info-reports-plugin.version>2.4</maven-project-info-reports-plugin.version>
 		<maven-surefire-report-plugin.version>2.9</maven-surefire-report-plugin.version>
 	</properties>
@@ -97,7 +97,8 @@
 		<module>eid-applet-service-cdi</module>
 		<module>eid-applet-service-cdi-endpoint</module>
 		<module>eid-applet-test</module>
-		<module>eid-applet-sql-ddl-plugin</module>
+		<!-- TODO enable again when needed -->
+		<!--<module>eid-applet-sql-ddl-plugin</module>-->
 		<module>eid-applet-bom</module>
 	</modules>
 
@@ -733,6 +734,7 @@
 							<link>http://java.sun.com/javase/6/docs/api/</link>
 							<link>http://java.sun.com/javaee/5/docs/api/</link>
 						</links>
+						<doclint>none</doclint>
 					</configuration>
 				</plugin>
 				<plugin>
