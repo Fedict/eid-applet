@@ -118,19 +118,12 @@
 			</modules>
 		</profile>
 		<profile>
-			<id>beta</id>
-			<modules>
-				<module>eid-applet-beta</module>
-			</modules>
-		</profile>
-		<profile>
 			<id>all</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<modules>
 				<module>eid-applet-tests</module>
-				<module>eid-applet-beta</module>
 			</modules>
 		</profile>
 	</profiles>
