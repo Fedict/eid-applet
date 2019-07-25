@@ -94,7 +94,7 @@ import be.fedict.eid.applet.service.signer.jaxb.opc.relationships.STTargetMode;
 
 /**
  * Signature verifier util class for Office Open XML file format.
- * <p/>
+ *
  * Implementation according to: Office Open XML - Part 2: Open Packaging
  * Conventions - ECMA-376-2
  * 

@@ -81,7 +81,7 @@
 		<richfaces.version>3.3.4.Final</richfaces.version>
 		<bouncycastle.version>1.45</bouncycastle.version>
 		<!-- jTrust 1.1.2 fails on 1.46 -->
-		<maven-javadoc-plugin.version>2.8</maven-javadoc-plugin.version>
+		<maven-javadoc-plugin.version>3.0.1</maven-javadoc-plugin.version>
 		<maven-project-info-reports-plugin.version>2.4</maven-project-info-reports-plugin.version>
 		<maven-surefire-report-plugin.version>2.9</maven-surefire-report-plugin.version>
 	</properties>
@@ -97,7 +97,8 @@
 		<module>eid-applet-service-cdi</module>
 		<module>eid-applet-service-cdi-endpoint</module>
 		<module>eid-applet-test</module>
-		<module>eid-applet-sql-ddl-plugin</module>
+		<!-- TODO enable again when needed -->
+		<!--<module>eid-applet-sql-ddl-plugin</module>-->
 		<module>eid-applet-bom</module>
 	</modules>
 
@@ -117,19 +118,12 @@
 			</modules>
 		</profile>
 		<profile>
-			<id>beta</id>
-			<modules>
-				<module>eid-applet-beta</module>
-			</modules>
-		</profile>
-		<profile>
 			<id>all</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<modules>
 				<module>eid-applet-tests</module>
-				<module>eid-applet-beta</module>
 			</modules>
 		</profile>
 	</profiles>
@@ -171,11 +165,6 @@
 			<dependency>
 				<groupId>org.bouncycastle</groupId>
 				<artifactId>bcprov-jdk16</artifactId>
-				<version>${bouncycastle.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.bouncycastle</groupId>
-				<artifactId>bcprov-jdk15</artifactId>
 				<version>${bouncycastle.version}</version>
 			</dependency>
 			<dependency>
@@ -227,16 +216,6 @@
 				<version>3.1</version>
 			</dependency>
 			<dependency>
-				<groupId>commons-collections</groupId>
-				<artifactId>commons-collections</artifactId>
-				<version>3.2.1</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-beanutils</groupId>
-				<artifactId>commons-beanutils</artifactId>
-				<version>1.8.3</version>
-			</dependency>
-			<dependency>
 				<groupId>joda-time</groupId>
 				<artifactId>joda-time</artifactId>
 				<version>1.6.2</version>
@@ -245,11 +224,6 @@
 				<groupId>commons-lang</groupId>
 				<artifactId>commons-lang</artifactId>
 				<version>2.5</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-net</groupId>
-				<artifactId>commons-net</artifactId>
-				<version>2.2</version>
 			</dependency>
 			<dependency>
 				<groupId>javax.ejb</groupId>
@@ -287,47 +261,6 @@
 				<version>1.5.8</version>
 			</dependency>
 			<dependency>
-				<groupId>org.jboss.seam</groupId>
-				<artifactId>jboss-seam</artifactId>
-				<version>${jboss-seam.version}</version>
-				<type>ejb</type>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.seam</groupId>
-				<artifactId>jboss-seam-ui</artifactId>
-				<version>${jboss-seam.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.seam</groupId>
-				<artifactId>jboss-seam-debug</artifactId>
-				<version>${jboss-seam.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.sun.facelets</groupId>
-				<artifactId>jsf-facelets</artifactId>
-				<version>1.1.15</version>
-			</dependency>
-			<dependency>
-				<groupId>org.richfaces.framework</groupId>
-				<artifactId>richfaces-impl-jsf2</artifactId>
-				<version>${richfaces.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.richfaces.ui</groupId>
-				<artifactId>richfaces-ui</artifactId>
-				<version>${richfaces.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.richfaces.framework</groupId>
-				<artifactId>richfaces-api</artifactId>
-				<version>${richfaces.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>javax.persistence</groupId>
-				<artifactId>persistence-api</artifactId>
-				<version>1.0</version>
-			</dependency>
-			<dependency>
 				<groupId>javax.faces</groupId>
 				<artifactId>jsf-api</artifactId>
 				<version>1.2_13</version>
@@ -338,29 +271,9 @@
 				<version>3.5.6-Final</version>
 			</dependency>
 			<dependency>
-				<groupId>org.hibernate.javax.persistence</groupId>
-				<artifactId>hibernate-jpa-2.0-api</artifactId>
-				<version>1.0.0.Final</version>
-			</dependency>
-			<dependency>
 				<groupId>org.hibernate</groupId>
 				<artifactId>hibernate-core</artifactId>
 				<version>3.6.2.Final</version>
-			</dependency>
-			<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-entitymanager</artifactId>
-				<version>3.6.2.Final</version>
-			</dependency>
-			<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-validator</artifactId>
-				<version>4.1.0.Final</version>
-			</dependency>
-			<dependency>
-				<groupId>hsqldb</groupId>
-				<artifactId>hsqldb</artifactId>
-				<version>1.8.0.10</version>
 			</dependency>
 			<dependency>
 				<groupId>com.lowagie</groupId>
@@ -368,44 +281,14 @@
 				<version>2.1.7</version>
 			</dependency>
 			<dependency>
-				<groupId>org.jboss.security</groupId>
-				<artifactId>jbosssx-client</artifactId>
-				<version>2.0.3.SP1</version>
-			</dependency>
-			<dependency>
 				<groupId>xalan</groupId>
 				<artifactId>xalan</artifactId>
-				<version>2.7.1</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.xalan</groupId>
-				<artifactId>xalan</artifactId>
-				<version>2.7.1-1.jbossorg</version>
-			</dependency>
-			<dependency>
-				<groupId>com.sun.xml.ws</groupId>
-				<artifactId>jaxws-tools</artifactId>
-				<version>${jaxws.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.sun.xml.ws</groupId>
-				<artifactId>jaxws-rt</artifactId>
-				<version>${jaxws.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.sun.xml.ws</groupId>
-				<artifactId>policy</artifactId>
-				<version>2.2.1</version>
-			</dependency>
-			<dependency>
-				<groupId>javax.jms</groupId>
-				<artifactId>jms</artifactId>
-				<version>1.1</version>
+				<version>2.7.2</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.santuario</groupId>
 				<artifactId>xmlsec</artifactId>
-				<version>1.5.2</version>
+				<version>1.5.8</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.poi</groupId>
@@ -413,24 +296,9 @@
 				<version>3.5-beta6</version>
 			</dependency>
 			<dependency>
-				<groupId>com.h2database</groupId>
-				<artifactId>h2</artifactId>
-				<version>1.2.126</version>
-			</dependency>
-			<dependency>
-				<groupId>net.sf.json-lib</groupId>
-				<artifactId>json-lib</artifactId>
-				<version>2.3</version>
-			</dependency>
-			<dependency>
 				<groupId>jtidy</groupId>
 				<artifactId>jtidy</artifactId>
 				<version>4aug2000r7-dev</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-digester</groupId>
-				<artifactId>commons-digester</artifactId>
-				<version>2.1</version>
 			</dependency>
 			<dependency>
 				<groupId>com.sun.xml.bind</groupId>
@@ -438,43 +306,8 @@
 				<version>${jaxb-impl.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.opensaml</groupId>
-				<artifactId>opensaml</artifactId>
-				<version>2.4.1</version>
-			</dependency>
-			<dependency>
-				<groupId>org.opensaml</groupId>
-				<artifactId>xmltooling</artifactId>
-				<version>1.3.1</version>
-			</dependency>
-			<dependency>
-				<groupId>jfree</groupId>
-				<artifactId>jfreechart</artifactId>
-				<version>1.0.13</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.ws.security</groupId>
-				<artifactId>wss4j</artifactId>
-				<version>1.6.7</version>
-				<exclusions>
-					<exclusion>
-						<groupId>xalan</groupId>
-						<artifactId>xalan</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>xerces</groupId>
-						<artifactId>xercesImpl</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
 				<groupId>javax</groupId>
 				<artifactId>javaee-web-api</artifactId>
-				<version>6.0</version>
-			</dependency>
-			<dependency>
-				<groupId>javax</groupId>
-				<artifactId>javaee-api</artifactId>
 				<version>6.0</version>
 			</dependency>
 			<dependency>
@@ -509,44 +342,9 @@
 				<!-- <version>2.6.14.GA</version> -->
 			</dependency>
 			<dependency>
-				<groupId>org.hornetq</groupId>
-				<artifactId>hornetq-bootstrap</artifactId>
-				<version>${hornetq.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.hornetq</groupId>
-				<artifactId>hornetq-jms</artifactId>
-				<version>${hornetq.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.hornetq</groupId>
-				<artifactId>hornetq-jboss-as-integration</artifactId>
-				<version>${hornetq.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.hornetq</groupId>
-				<artifactId>hornetq-core</artifactId>
-				<version>${hornetq.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.hornetq</groupId>
-				<artifactId>hornetq-logging</artifactId>
-				<version>${hornetq.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.hornetq</groupId>
-				<artifactId>hornetq-ra</artifactId>
-				<version>${hornetq.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.netty</groupId>
-				<artifactId>netty</artifactId>
-				<version>3.2.0.Final</version>
-			</dependency>
-			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-compress</artifactId>
-				<version>1.1</version>
+				<version>1.18</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.maven</groupId>
@@ -559,21 +357,6 @@
 				<version>1.0.2</version>
 			</dependency>
 			<dependency>
-				<groupId>javax.el</groupId>
-				<artifactId>el-api</artifactId>
-				<version>1.0</version>
-			</dependency>
-			<dependency>
-				<groupId>javax.mail</groupId>
-				<artifactId>mail</artifactId>
-				<version>1.4</version>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.seam.servlet</groupId>
-				<artifactId>seam-servlet</artifactId>
-				<version>3.0.0.Final</version>
-			</dependency>
-			<dependency>
 				<groupId>javax.enterprise</groupId>
 				<artifactId>cdi-api</artifactId>
 				<version>1.0</version>
@@ -582,11 +365,6 @@
 				<groupId>be.fedict.commons-eid</groupId>
 				<artifactId>commons-eid-consumer</artifactId>
 				<version>0.2.1</version>
-			</dependency>
-			<dependency>
-				<groupId>org.primefaces</groupId>
-				<artifactId>primefaces</artifactId>
-				<version>4.0</version>
 			</dependency>
 			<dependency>
 				<groupId>org.jboss.spec</groupId>
@@ -656,6 +434,26 @@
 						</plugin>
 					</reportPlugins>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.owasp</groupId>
+				<artifactId>dependency-check-maven</artifactId>
+				<version>3.3.2</version>
+				<configuration>
+					<failBuildOnCVSS>0</failBuildOnCVSS>
+					<format>html</format>
+					<suppressionFile>vulnerability-suppressions.xml</suppressionFile>
+					<centralAnalyzerEnabled>false</centralAnalyzerEnabled>
+					<failOnError>false</failOnError>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>aggregate</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 
@@ -733,6 +531,7 @@
 							<link>http://java.sun.com/javase/6/docs/api/</link>
 							<link>http://java.sun.com/javaee/5/docs/api/</link>
 						</links>
+						<doclint>none</doclint>
 					</configuration>
 				</plugin>
 				<plugin>

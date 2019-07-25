@@ -29,7 +29,6 @@ import org.apache.commons.codec.binary.Base64;
 /**
  * A light implementation of VCard 3.0
  *
- * @see http://www.ietf.org/rfc/rfc2426.txt
  * @author Bart Hanssens
  */
 public class VcardLight {

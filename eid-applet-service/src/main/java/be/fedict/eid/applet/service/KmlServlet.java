@@ -38,8 +38,6 @@ import be.fedict.eid.applet.service.util.KmlLight;
  * Servlet that outputs the eID identity data from the HTTP session to a zipped
  * KML (.kmz) Can be used by virtual globes like Google Earth, KDE Marble...
  * 
- * @see http://www.opengeospatial.org/standards/kml/
- * 
  * @author Bart Hanssens
  * 
  */
